@@ -1,5 +1,9 @@
 ---
 ---
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('{{ "/assets/fonts/inter-latin-wght-normal.woff2" | relative_url }}') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:swap;src:url('{{ "/assets/fonts/newsreader-latin-wght-normal.woff2" | relative_url }}') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:200 800;font-display:swap;src:url('{{ "/assets/fonts/newsreader-latin-wght-italic.woff2" | relative_url }}') format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url('{{ "/assets/fonts/jetbrains-mono-latin-400-normal.woff2" | relative_url }}') format('woff2')}
 :root{
   --bg:#fafaf7; --surface:#fff; --ink:#1a1a1a; --muted:#6b6b66; --line:#e6e4dd;
   --accent:#2f5bea; --accent-soft:#e8edfd; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
@@ -35,7 +39,7 @@ nav a.on{color:var(--ink)}
 
 /* hero */
 .hero{padding:72px 0 40px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
-.hero h1{font:500 clamp(32px,5vw,46px)/1.1 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.hero h1{text-wrap:balance;font:500 clamp(32px,5vw,46px)/1.1 Newsreader,Georgia,serif;letter-spacing:-.02em}
 .hero h1 em{color:var(--accent);font-style:italic}
 .hero p{color:var(--muted);margin-top:16px;max-width:none;font-size:17px}
 .hero p.aside{color:var(--ink);margin-top:18px}
