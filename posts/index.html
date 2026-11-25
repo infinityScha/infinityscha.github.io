@@ -1,0 +1,20 @@
+---
+layout: default
+nav: blog
+title: Blog
+permalink: /posts/
+---
+
+<div class="wrap">
+  <div class="prose"><h1>Blog</h1><p class="lead">Short write-ups on models, solvers and the code around them.</p></div>
+  {% for post in site.posts %}
+  <a class="post" href="{{ site.baseurl }}{{ post.url }}">
+    <div class="pt">
+      <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+      <h3>{{ post.title }}</h3>
+      {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+    </div>
+    {% if post.thumb %}<div class="pi" style="background-image:url({{ post.thumb | relative_url }})"></div>{% endif %}
+  </a>
+  {% endfor %}
+</div>

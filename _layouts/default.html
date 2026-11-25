@@ -1,65 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!--for google search verification-->
-    <meta name="google-site-verification" content="DkZ49TWxMBsEA2MR-3h0rCvMFHvcQRS0hdfUV-tKvZA" />
+<html lang="en">
+<head>
+  <!--for google search verification-->
+  <meta name="google-site-verification" content="DkZ49TWxMBsEA2MR-3h0rCvMFHvcQRS0hdfUV-tKvZA" />
 
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  <title>{% if page.title and page.url != '/' %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
-    {% include meta.html %}
+  {% include meta.html %}
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-          inlineMath: [['$','$']]
-        }
-      });
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false},{left:'$',right:'$',display:false}],throwOnError:false})"></script>
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header class="top"><div class="wrap wide">
+  <a class="brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
+  <nav>
+    <a href="{{ site.baseurl }}/"{% if page.nav == 'home' %} class="on"{% endif %}>Home</a>
+    <a href="{{ site.baseurl }}/projects/"{% if page.nav == 'projects' %} class="on"{% endif %}>Projects</a>
+    <a href="{{ site.baseurl }}/posts/"{% if page.nav == 'blog' %} class="on"{% endif %}>Blog</a>
+    <button id="theme" aria-label="Toggle theme">&#9790;</button>
+  </nav>
+</div></header>
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+<main>
+{{ content }}
+</main>
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+<footer><div class="wrap wide">
+  <span>&copy; {{ site.time | date: "%Y" }} {{ site.name }}</span>
+  <span><a href="https://github.com/{{ site.footer-links.github }}">GitHub</a><a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}">LinkedIn</a></span>
+</div></footer>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/projects">Projects</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
-  </body>
+<script>
+document.getElementById('theme').onclick=function(){
+  var root=document.documentElement;
+  var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  root.dataset.theme=dark?'light':'dark';
+  try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}
+};
+</script>
+{% include analytics.html %}
+</body>
 </html>

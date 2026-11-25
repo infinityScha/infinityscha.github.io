@@ -1,17 +1,10 @@
 ---
 layout: default
+nav: blog
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html %}
+<article class="wrap prose">
+  <p class="meta" style="margin-top:48px"><a href="{{ site.baseurl }}/posts/">&larr; All posts</a> &middot; {{ page.date | date: "%b %-d, %Y" }}</p>
+  <h1 style="margin-top:12px">{{ page.title }}</h1>
+  {{ content }}
 </article>

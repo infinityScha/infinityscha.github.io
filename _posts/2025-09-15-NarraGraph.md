@@ -1,6 +1,8 @@
 ---
 layout: post
-title: NarraGraph – Visualizing Stories 
+title: NarraGraph – Visualizing Stories
+thumb: /images/projects/landing-page-example.jpg
+summary: "After a year as a hobby project, NarraGraph is live: a Google Maps for characters, places and events."
 ---
 
 After a year of working on it as a hobby project, [Narragraph](https://narragraph.com) is finally live!  

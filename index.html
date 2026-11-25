@@ -1,18 +1,38 @@
 ---
 layout: default
+nav: home
+title: Home
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+  <div class="wrap wide">
+    <div class="hero">
+      <div>
+        <h1>Numerical models for hard problems,<br><em>shipped as working code.</em></h1>
+        <p>I am a computational scientist experienced in simulation, probabilistic modelling and statistical inference. I develop the model and the solver, and take it all the way to a tool others can run. PhD candidate in biophysics at Charles University and Hebrew University, graduating early 2027.</p>
+        <p class="aside">Most recently: I ported a molecular-dynamics solver to portfolio risk. It lost, and I can show why. <a href="{{ '/physics-inspired-solvers-vs-market-crashes/' | relative_url }}">Read the write-up →</a></p>
+        <p class="aside2">Off the clock: weightlifting, hiking and manga.</p>
       </div>
+      <img class="avatar" alt="Itay Schachter" src="{{ '/images/avatar.jpg' | relative_url }}" onerror="this.style.visibility='hidden'">
+    </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <h2 class="sec">How I work</h2>
+    <div class="mgrid">
+      <div class="m"><h4>1 · Model</h4><p>I start from the physics or the statistics and write it down as an energy, a likelihood or a simulation, with the assumptions explicit. Then I test it against what actually happened.</p></div>
+      <div class="m"><h4>2 · Solve</h4><p>I solve it with optimisation, Monte Carlo, finite elements or molecular dynamics, on a laptop or an HPC cluster. I profile first, then compile the hot loop.</p></div>
+      <div class="m"><h4>3 · Ship</h4><p>When a model is worth using, I package it: clean modules, tests, a written spec, and a running tool or service.</p><p style="margin-top:10px"><a href="https://narragraph.com" target="_blank" rel="noopener">NarraGraph →</a> &nbsp; <a href="https://github.com/infinityScha/ElasticTool" target="_blank" rel="noopener">ElasticTool →</a></p></div>
+    </div>
+
+    <h2 class="sec">Selected work</h2>
+    <div class="grid">
+      <a class="card" href="{{ '/projects/' | relative_url }}" style="color:inherit;text-decoration:none"><div class="img contain" style="background-image:url({{ '/images/projects/budded_state.png' | relative_url }})"></div><div class="body"><h3>Vesicle Budding</h3><p>A full continuum model of budding, in a sole-author <i>Biophysical Journal</i> paper.</p></div></a>
+      <a class="card" href="{{ '/projects/' | relative_url }}" style="color:inherit;text-decoration:none"><div class="img contain" style="background-image:url({{ '/images/projects/internalization-ga.png' | relative_url }})"></div><div class="body"><h3>Vesicle Internalization</h3><p>A discontinuous-to-continuous morphological phase transition, mapped with a multi-threaded Julia model.</p></div></a>
+      <a class="card" href="{{ '/projects/' | relative_url }}" style="color:inherit;text-decoration:none"><div class="img" style="background-image:url({{ '/images/projects/landing-page-example.jpg' | relative_url }})"></div><div class="body"><h3>NarraGraph</h3><p>A live full-stack web app that turns story structure into an explorable graph.</p></div></a>
+    </div>
+
+    <h2 class="sec">About</h2>
+    <div class="prose" style="max-width:760px">
+      <p>My formal background is mathematics, computational chemistry and computational biophysics. In my PhD I model cell membranes, the thin fatty skin around every cell, at every scale from single atoms up to whole cells.</p>
+      <p>I have published 6 peer-reviewed papers, one of which was a journal cover.</p>
+      <a class="contact" href="https://www.linkedin.com/in/itay-schachter" target="_blank" rel="noopener">Contact me →</a>
+    </div>
+  </div>

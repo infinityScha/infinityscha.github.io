@@ -1,0 +1,71 @@
+---
+layout: default
+nav: projects
+title: Projects
+permalink: /projects/
+---
+
+  <div class="wrap wide">
+    <div class="prose"><h1>Projects</h1><p class="lead">Finished work, from simulation and theory to full-stack software.</p></div>
+
+    <article class="proj">
+      <div class="media"><img src="{{ '/images/projects/landing-page-example.jpg' | relative_url }}" alt="NarraGraph landing page example"><video autoplay muted playsinline loop controls src="{{ '/images/projects/story-progression.mp4' | relative_url }}"></video></div>
+      <div class="txt"><h3>NarraGraph <span class="yr">2025</span></h3>
+        <p class="hook">A “Google Maps” for story graphs.</p>
+        <p><span class="lab">Description:</span> NarraGraph is a tool for visualizing complex narratives, designed for writers, worldbuilders, and TTRPG game masters. It maps relationships between <b>characters, locations, and events over time</b>, enabling users to explore how stories evolve and interconnect. The interface emphasizes interactivity and clarity, providing a “graph-based” approach to narrative structure.</p>
+        <p><span class="lab">Significance:</span> The tool supports iterative storytelling by allowing creators to identify inconsistencies, explore alternative plotlines, and gain a holistic view of story dynamics. Its design aims to reduce cognitive load when managing large or intricate narratives.</p>
+        <p><span class="lab">Technology stack:</span></p>
+        <ul><li><b>Frontend:</b> React, Next.js, Material-UI (MUI)</li><li><b>Graph visualization:</b> Cytoscape.js</li><li><b>Backend:</b> FastAPI, Kùzu, SQLite</li><li><b>Cloud infrastructure:</b> Google Cloud Storage, Firebase, Google Compute Engine</li><li><b>UI/UX:</b> iteratively refined based on user testing and feedback</li><li><b>Testing &amp; version control:</b> pytest, GitHub</li></ul>
+        <p><span class="lab">Resulting web app:</span> <a href="https://narragraph.com" target="_blank" rel="noopener">narragraph.com</a></p></div>
+    </article>
+
+    <article class="proj">
+      <div class="media"><a href="https://doi.org/10.1039/d6sm00560h" target="_blank" rel="noopener"><img src="{{ '/images/projects/internalization-ga.png' | relative_url }}" alt="Vesicle internalization: eye to kettle geometry"></a></div>
+      <div class="txt"><h3>Vesicle Internalization <span class="yr">2026</span></h3>
+        <p class="hook">How one vesicle swallows another, and why its shape flips from an “eye” to a “kettle”.</p>
+        <p><span class="lab">Description:</span> Explored the internalization of lipid vesicles through multivesicular topologies using a continuum elastic model (multi-threaded in Julia). The study mapped the free-energy landscapes of hemifused intermediates and revealed a morphological phase transition from a lens-like “eye” geometry to an elongated “kettle” geometry, discontinuous below a critical reduced volume and continuous above it. The kettle morphology is metastable, suggesting a hysteretic externalization pathway.</p>
+        <p><span class="lab">Significance:</span> Results provide a quantitative framework for identifying transient internalization intermediates in imaging data, relevant to endocytic transport and cellular compartmentalization.</p>
+        <p><span class="lab">Publication:</span> <a href="https://doi.org/10.1039/d6sm00560h" target="_blank" rel="noopener">here</a></p></div>
+    </article>
+
+    <article class="proj">
+      <div class="media"><img id="budimg" class="clk" src="{{ '/images/projects/budded_state.png' | relative_url }}" alt="Budded vesicle state" data-still="{{ '/images/projects/budded_state.png' | relative_url }}" data-gif="{{ '/images/projects/movie_budding.gif' | relative_url }}"><p class="cap">Click the image to play/pause the video</p></div>
+      <div class="txt"><h3>Modeling Vesicle Budding Dynamics <span class="yr">2024</span></h3>
+        <p class="hook">How a membrane pinches off a bubble, and why sorting lipids makes it easier.</p>
+        <p><span class="lab">Description:</span> Explored the budding mechanism of lipid nanoscale vesicles under physiological conditions using a detailed continuum elastic model. The study focused on high-curvature transitions and revealed that lipid demixing reduces energy barriers for budding. This research highlights the role of asymmetry in leaflet composition, osmotic balance, and area, identifying lipid domain formation as a key driver of significant curvature changes.</p>
+        <p><span class="lab">Significance:</span> Results provide insights into biological processes like viral budding and endocytosis, showcasing the importance of lipid sorting and heterogeneity in regulating vesicle dynamics.</p>
+        <p><span class="lab">Publication:</span> <a href="https://doi.org/10.1016/j.bpj.2024.12.012" target="_blank" rel="noopener">here</a>. Featured on the cover of the June 3, 2025 issue of <i>Biophysical Journal</i>.</p></div>
+    </article>
+
+    <article class="proj">
+      <div class="media"><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.1c03712" target="_blank" rel="noopener"><img src="{{ '/images/projects/lo-phase-toc.png' | relative_url }}" alt="Graphical abstract: cholesterol and membrane crossover with temperature"></a></div>
+      <div class="txt"><h3>The Two Faces of the L<sub>o</sub> Phase <span class="yr">2022</span></h3>
+        <p class="hook">Tiny rigid clusters inside a lipid membrane that melt close to body temperature.</p>
+        <p><span class="lab">Description:</span> Investigated the structural characteristics of the liquid-ordered (L<sub>o</sub>) lipid phase in model membranes through molecular simulations. Identified and characterized small, mostly hexagonally packed lipid clusters within the L<sub>o</sub> phase, which are rigid at room temperature. These clusters undergo melting upon heating, and notably, this transition occurs in proximity to physiological conditions, suggesting its potential biophysiological significance.</p>
+        <p><span class="lab">Publication:</span> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.1c03712" target="_blank" rel="noopener">here</a></p></div>
+    </article>
+
+    <article class="proj">
+      <div class="media"><a href="https://pubs.acs.org/doi/full/10.1021/acs.jctc.2c01054" target="_blank" rel="noopener"><img src="{{ '/images/projects/nanodisc-toc.png' | relative_url }}" alt="Nanodisc simulation versus elastic theory prediction"></a></div>
+      <div class="txt"><h3>Lipid Nanodiscs Elasticity <span class="yr">2020–2023</span></h3>
+        <p class="hook">How stiff is a nanometre-sized patch of membrane? Measured from simulation and theory.</p>
+        <p><span class="lab">Initial study:</span> Through molecular simulations and continuum elastic theory, I investigated the elastic properties of lipid nanodiscs, nanometric bilayer patches enveloped by membrane scaffolding proteins (MSPs). I used a computational approach, based on molecular dynamics simulations, to quantify bending rigidity (K<sub>C</sub>) and tilt modulus (κ<sub>t</sub>) locally. Results revealed that nanodiscs exhibit unique material properties compared to infinite bilayers of corresponding lipid composition, showing higher stiffness and spatial variations in moduli.</p>
+        <p><span class="lab">Follow-up study:</span></p>
+        <ul><li>I used a continuum elastic theory to understand the interplay between MSP geometry, lipid confinement, and nanodisc shape.</li><li>The equilibrium nanodisc shape was determined by minimizing the elastic free energy functional, providing a quantitative understanding of nanodisc deformations.</li><li>The results demonstrated sensitivity of the nanodisc shape to its size, lipid density, and lipid tilt and thickness at the MSP contact.</li><li>The bending rigidity was novelly extracted from the membrane shape profile by fitting the numerically minimized full elastic functional to said profile.</li></ul>
+        <p><span class="lab">Significance:</span> Findings show the importance of considering nanodisc deformations and material properties when interpreting both structure and function of proteins embedded within nanodiscs. The integration of a continuum elastic theory offers a comprehensive understanding of the relationship between nanodisc structure and membrane material properties.</p>
+        <p><span class="lab">Publications:</span> <a href="https://pubs.acs.org/doi/full/10.1021/acs.jctc.2c01054" target="_blank" rel="noopener">here</a> and <a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.0c03374" target="_blank" rel="noopener">here</a>.</p></div>
+    </article>
+
+    <article class="proj">
+      <div class="media"><img src="{{ '/images/projects/amirim_proj.png' | relative_url }}" alt="Glass transition result"><img src="{{ '/images/projects/amirim_proj2.png' | relative_url }}" alt="Glass transition result 2"></div>
+      <div class="txt"><h3>“Simplifying” Glass Transition (BSc Hon. Thesis) <span class="yr">2019</span></h3>
+        <p class="hook">Can simple point particles freeze into a glass? With the right interaction, yes.</p>
+        <p><span class="lab">Description:</span> Investigated the glass transition in anisotropic systems through constant pressure Monte Carlo simulations, with advanced simulation methods such as Replica Exchange, all coded from scratch. Focused on finding simple potentials which result in glass transition and understanding the interplay of kinetic and thermodynamic factors.</p>
+        <p><span class="lab">Significance:</span> Demonstrated that a single-component system comprising point particles with anisotropic “quasi-dipole” interactions undergoes a glass transition when the interaction strength is sufficiently high. This observation could have implications for applications in materials science.</p>
+        <p><span class="lab">Resulting thesis:</span> <a href="https://raw.githubusercontent.com/infinityScha/blog/master/files/projects/amirim%20work.pdf" target="_blank" rel="noopener">here</a></p></div>
+    </article>
+  </div>
+<script>
+var bi=document.getElementById('budimg');
+if(bi){bi.onclick=function(){bi.src=(bi.src===bi.dataset.gif)?bi.dataset.still:bi.dataset.gif};}
+</script>

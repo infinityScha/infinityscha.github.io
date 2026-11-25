@@ -1,6 +1,8 @@
 ---
 layout: post
 title: How to Paint a Periodic Zebra? (in Python)
+thumb: /images/periodic_zebra/periodic_zebra.jpg
+summary: "Using permutation parity to segment periodic patterns in simulations, or any spatially periodic data."
 ---
 
 Periodic patterns are everywhere—from zebra stripes to the molecular world. These patterns often hold hidden structures that demand innovative approaches to understand. In this post, we’ll explore an elegant and unconventional solution to a relatively common challenge in periodic simulations: painting a "periodic zebra."
