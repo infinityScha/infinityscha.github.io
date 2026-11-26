@@ -67,5 +67,18 @@ permalink: /projects/
   </div>
 <script>
 var bi=document.getElementById('budimg');
-if(bi){bi.onclick=function(){bi.src=(bi.src===bi.dataset.gif)?bi.dataset.still:bi.dataset.gif};}
+if(bi){
+  bi.src=bi.dataset.gif;
+  var frozen=null;
+  bi.onclick=function(){
+    if(frozen){ frozen.remove(); frozen=null; bi.style.display=''; return; }
+    var c=document.createElement('canvas');
+    c.width=bi.naturalWidth; c.height=bi.naturalHeight;
+    c.getContext('2d').drawImage(bi,0,0);
+    c.className=bi.className; c.style.cssText='width:100%;height:auto';
+    c.onclick=bi.onclick;
+    bi.style.display='none';
+    bi.parentNode.insertBefore(c,bi); frozen=c;
+  };
+}
 </script>
