@@ -75,7 +75,7 @@ if(bi){
     var c=document.createElement('canvas');
     c.width=bi.naturalWidth; c.height=bi.naturalHeight;
     c.getContext('2d').drawImage(bi,0,0);
-    c.className=bi.className; c.style.cssText='width:100%;height:auto';
+    c.className=bi.className;
     c.onclick=bi.onclick;
     bi.style.display='none';
     bi.parentNode.insertBefore(c,bi); frozen=c;
