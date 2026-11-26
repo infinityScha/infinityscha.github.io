@@ -127,7 +127,7 @@ table.t th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:va
 .prose pre code{border:0;padding:0;background:none}
 .proj{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;padding:34px 0;border-top:1px solid var(--line)}
 .proj .media{display:flex;flex-direction:column;gap:12px;align-self:start}
-.proj .media img,.proj .media video{width:100%;height:auto;border-radius:12px;background:#fff;border:1px solid var(--line);display:block}
+.proj .media img,.proj .media video,.proj .media canvas{width:100%;height:auto;border-radius:12px;background:#fff;border:1px solid var(--line);display:block}
 .proj .clk{cursor:pointer}
 .proj .cap{font-size:13px;color:var(--muted);text-align:center}
 .proj h3{font:500 28px/1.25 Newsreader,Georgia,serif;margin-bottom:12px}
